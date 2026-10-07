@@ -3,16 +3,29 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SJAI Job Hub | One job. One place. Everyone clear.</title>
-<meta name="description" content="Job updates, photos, agreed extras and customer questions in one place your whole crew can use. 15 Founding Builder places at £15 a month. Join the waitlist.">
+<title>SJAI Job Hub | The job app for builders. Out now on Android and iPhone</title>
+<meta name="description" content="The job app for builders, their crews and their customers. Get it on Google Play, or add it to your iPhone from Safari. Start free with 14 days of Pro, no card needed.">
+<link rel="canonical" href="https://sjai.uk/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SJAI Job Hub">
+<meta property="og:title" content="SJAI Job Hub — out now on Google Play and iPhone">
+<meta property="og:description" content="The job app for builders, their crews and their customers. Get it on Google Play, or add it to your iPhone from Safari. Start free with 14 days of Pro, no card needed.">
+<meta property="og:url" content="https://sjai.uk/">
+<meta property="og:image" content="https://sjai.uk/assets/og-job-hub.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="icon" href="/assets/app-icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/app-icon-192.png">
 <style>
-:root{--bg:#0b0f14;--panel:#141b24;--panel2:#1b2430;--line:#2a3646;--text:#f2f5f9;--muted:#b4c0cf;--accent:#3dd6c6;--accent-ink:#04201d;--warn:#ffd166}
+:root{--bg:#0b0b0b;--panel:#161616;--panel2:#1e1e1e;--line:#2e2e2e;--text:#f7f5f0;--muted:#c4c0b8;--accent:#f5c400;--accent-ink:#141000;--warn:#ffd166}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:var(--accent)}
 .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(11,15,20,.94);backdrop-filter:blur(6px);z-index:10}
+header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(11,11,11,.94);backdrop-filter:blur(6px);z-index:10}
 .nav{display:flex;align-items:center;justify-content:space-between;height:62px}
 .logo{font-weight:800;letter-spacing:.02em;font-size:1.15rem;color:var(--text);text-decoration:none}
 .logo span{color:var(--accent)}
@@ -42,7 +55,7 @@ ul.tick li{padding-left:28px;position:relative;margin:9px 0}
 ul.tick li:before{content:"";position:absolute;left:0;top:.5em;width:14px;height:8px;border-left:3px solid var(--accent);border-bottom:3px solid var(--accent);transform:rotate(-45deg)}
 form{display:grid;gap:14px;max-width:560px}
 label{font-weight:600;font-size:.95rem;display:block;margin-bottom:5px}
-input[type=text],input[type=email],input[type=tel],select{width:100%;padding:13px 14px;border-radius:10px;border:1px solid #4a5a70;background:#0f151d;color:var(--text);font-size:1rem;min-height:48px}
+input[type=text],input[type=email],input[type=tel],select{width:100%;padding:13px 14px;border-radius:10px;border:1px solid #555;background:#111;color:var(--text);font-size:1rem;min-height:48px}
 input:focus,select:focus,button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--warn);outline-offset:2px}
 .check{display:flex;gap:12px;align-items:flex-start;font-size:.95rem;color:var(--muted)}
 .check input{width:22px;height:22px;margin-top:3px;flex:none;accent-color:var(--accent)}
@@ -54,24 +67,58 @@ details p{color:var(--muted);margin:10px 0 0}
 footer{border-top:1px solid var(--line);padding:32px 0 48px;color:var(--muted);font-size:.9rem}
 footer p{margin:6px 0}
 .honest{border-left:4px solid var(--warn);background:var(--panel);padding:14px 18px;border-radius:0 10px 10px 0;color:var(--muted);font-size:.95rem}
+
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{width:34px;height:34px;border-radius:9px;display:block}
+.hero{display:grid;gap:36px;align-items:center}
+@media(min-width:900px){.hero{grid-template-columns:minmax(0,1fr) 300px}}
+.hero-shot img{width:100%;max-width:300px;display:block;margin:0 auto;border-radius:22px;border:1px solid var(--line);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.play{display:inline-block;line-height:0;border-radius:10px}
+.play img{height:56px;width:auto;display:block}
+.cta{align-items:center}
+.steps{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.step{background:var(--panel);border:1px solid var(--accent);border-radius:16px;padding:24px}
+.step .for{margin:0 0 4px;color:var(--accent);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+.step h3{margin:0 0 12px;font-size:1.15rem}
+.step ol{margin:0;padding-left:1.25rem;display:grid;gap:9px}
+.step ol li::marker{color:var(--accent);font-weight:700}
+.step .tip{margin:14px 0 0;font-size:.92rem;color:var(--muted);border-left:3px solid var(--accent);padding-left:10px}
+.step.me{box-shadow:0 0 0 3px rgba(245,196,0,.35)}
+.you{display:none;margin-left:8px;background:var(--accent);color:var(--accent-ink);border-radius:999px;padding:2px 9px;font-size:.72rem;letter-spacing:.06em;vertical-align:middle}
+.step.me .you{display:inline-block}
+.shots{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.shots figure{margin:0}
+.shots img{width:100%;height:440px;object-fit:cover;object-position:top;border-radius:16px;border:1px solid var(--line);display:block}
+.shots figcaption{color:var(--muted);font-size:.92rem;margin-top:10px}
+.plans{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.plan{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px}
+.plan.pick{border-color:var(--accent)}
+.plan h3{margin:0}
+.plan .price{margin:10px 0 8px;font-size:2.2rem}
+.plan p{color:var(--muted);margin:0}
+.legal{font-size:.8rem;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center}
 </style>
 </head>
 <body>
 <header><div class="wrap nav">
-  <a class="logo" href="#top">SJAI <span>Job Hub</span></a>
-  <a class="btn small" href="#waitlist">Join the waitlist</a>
+  <a class="logo" href="/"><img src="/assets/app-icon-192.png" width="34" height="34" alt="">SJAI <span>Job Hub</span></a>
+  <a class="btn small" href="https://job-hub-proof-production.up.railway.app/signup">Start free</a>
 </div></header>
 
 <main id="top">
-<div class="wrap hero">
-  <span class="tag">15 Founding Builder places</span>
-  <h1>One job.<br>One place.<br><em>Everyone clear.</em></h1>
-  <p class="lead">Job updates, photos, agreed extras and customer questions, together in one place your whole crew can use. Built by a working builder, for builders.</p>
-  <div class="cta">
-    <a class="btn" href="#waitlist">Become a Founding Builder</a>
-    <a class="btn ghost" href="#how">See how it works</a>
+<div class="wrap hero" style="padding:56px 20px 44px">
+  <div>
+    <span class="tag">Out now &middot; Android and iPhone</span>
+    <h1>One job.<br>One place.<br><em>Everyone clear.</em></h1>
+    <p class="lead">The job app for builders, their crews and their customers. Updates, photos, agreed extras and customer questions, together on your phone instead of lost in WhatsApp.</p>
+    <div class="cta">
+      <a class="play" href="https://play.google.com/store/apps/details?id=com.sjdevelopmentsnw.jobhub&amp;referrer=utm_source%3Dsjai.uk%26utm_medium%3Dhero"><img src="/assets/google-play-badge.webp" width="564" height="168" alt="Get it on Google Play"></a>
+      <a class="btn" href="#get">iPhone? Start here</a>
+    </div>
+    <p class="note">Start free with 14 days of Pro. No card needed. Built and used by a working Liverpool builder.</p>
   </div>
-  <p class="note">Free to join the waitlist. No payment taken now.</p>
+  <div class="hero-shot"><img src="/assets/jh-ex-team-480w.webp" width="480" height="727" alt="Job Hub site-team conversation on a phone, using an invented job."></div>
 </div>
 
 <section id="problem"><div class="wrap">
@@ -86,37 +133,77 @@ footer p{margin:6px 0}
 
 <section id="how"><div class="wrap">
   <h2>How it works</h2>
-  <p class="sub">Each person gets a simple link for their part of the job. No training and no app to learn.</p>
+  <p class="sub">Each person gets a simple link for their part of the job. No training needed.</p>
   <div class="grid">
-    <div class="card"><h3>You</h3><p>One view of unread questions, extras waiting for a price and payments to check, across every job.</p></div>
-    <div class="card"><h3>Your crew</h3><p>Open an assigned job, add a photo or a note in a few taps. They only see what they need.</p></div>
-    <div class="card"><h3>Your customer</h3><p>See the site photos for their own job, ask a question, and approve an extra in writing.</p></div>
+    <div class="card"><h3>You</h3><p>Log the enquiry, book the visit into Google Calendar, and turn it into a job when you win it. One view of questions, extras and payments to check, across every job.</p></div>
+    <div class="card"><h3>Your crew</h3><p>One site-team thread per job. Open an assigned job, add a photo or a note in a few taps. They only see what they need.</p></div>
+    <div class="card"><h3>Your customer</h3><p>Their own job page: site photos, questions, and extras approved in writing at the exact price.</p></div>
   </div>
-  <p style="margin-top:22px" class="honest">Job Hub works in a web browser on any phone. An Android app is with Google for review and is not yet available to download.</p>
+  <div class="shots" style="margin-top:28px">
+    <figure><img src="/assets/jh-ex-customer-480w.webp" width="480" height="763" loading="lazy" alt="Customer view of a job with site photos, agreed price, paid so far and balance."><figcaption>The customer&rsquo;s own page. Payments are recorded by you after checking your bank.</figcaption></figure>
+    <figure><img src="/assets/jh-ex-extra-480w.webp" width="480" height="894" loading="lazy" alt="Extra work priced, accepted and agreed, with the conversation next to it."><figcaption>Extras asked for, priced and accepted at that exact figure.</figcaption></figure>
+    <figure><img src="/assets/jh-ex-team-480w.webp" width="480" height="727" loading="lazy" alt="Site team conversation for one job."><figcaption>One site-team thread per job for everyone on it.</figcaption></figure>
+  </div>
+  <p class="note">Demonstration screens using invented jobs, names and figures.</p>
 </div></section>
 
-<section id="offer"><div class="wrap">
-  <h2>Founding Builder offer</h2>
-  <p class="sub">We are opening Job Hub to a small group of other builders first. In return we ask for honest feedback.</p>
-  <div class="offer">
-    <div class="price">£15<small> / month + VAT</small></div>
-    <p style="margin:8px 0 0;color:var(--muted)">Locked in for as long as you stay subscribed. Full price is £29 a month + VAT.</p>
-    <ul class="tick">
-      <li>Only 15 places, and the limit is built into the system</li>
-      <li>Invite only: we confirm your place with you before anything is charged</li>
-      <li>Everything in Pro: jobs, crew links, customer links, photos, extras and payments</li>
-    </ul>
+<section id="get"><div class="wrap">
+  <h2>Get the app</h2>
+  <p class="sub">Three steps on any phone.</p>
+  <div class="steps" id="steps">
+    <div class="step" id="android">
+      <p class="for">Android phones <span class="you">Your phone</span></p>
+      <h3>Get it on Google Play</h3>
+      <ol>
+        <li>Tap <a href="https://play.google.com/store/apps/details?id=com.sjdevelopmentsnw.jobhub&amp;referrer=utm_source%3Dsjai.uk%26utm_medium%3Dsteps">Get it on Google Play</a>, or search &ldquo;SJAI Job Hub&rdquo; in the Play Store.</li>
+        <li>Tap <strong>Install</strong>, then <strong>Open</strong>.</li>
+        <li>Builders: tap <strong>Create your business account</strong>. Crew and customers: open the link your builder sent you.</li>
+      </ol>
+      <p class="tip">Available in the UK and Ireland. Plans are managed on the website, not inside the app.</p>
+    </div>
+    <div class="step" id="iphone">
+      <p class="for">iPhone and iPad <span class="you">Your phone</span></p>
+      <h3>Add it from Safari &mdash; no App Store needed</h3>
+      <p id="inapp" class="tip" hidden style="margin:0 0 14px">You are inside Instagram, Facebook or TikTok. Tap the <strong>&middot;&middot;&middot;</strong> menu and choose <strong>Open in Safari</strong> (or Open in browser) first.</p>
+      <ol>
+        <li>In <strong>Safari</strong>, open <a href="https://job-hub-proof-production.up.railway.app/signup">Job Hub sign-up</a> and create your business account. Crew and customers: open your builder&rsquo;s link in Safari.</li>
+        <li>Tap the <strong>Share</strong> button &mdash; the square with an arrow pointing up.</li>
+        <li>Scroll down, tap <strong>Add to Home Screen</strong>, then <strong>Add</strong>. Job Hub now has its own icon and opens full screen.</li>
+      </ol>
+      <p class="tip">Add to Home Screen only works from Safari. Allow notifications when Job Hub asks, so you see new messages.</p>
+    </div>
+    <div class="step" id="crew">
+      <p class="for">Site teams and customers</p>
+      <h3>Nothing to sign up for</h3>
+      <ol>
+        <li>Your builder sends you a link by WhatsApp, text or email.</li>
+        <li>Open it. You only see the job or jobs you are on.</li>
+        <li>Optional: install the app or add it to your Home Screen, so it is one tap away.</li>
+      </ol>
+      <p class="tip">Customers only ever see their own job, and only the documents the builder chooses to share.</p>
+    </div>
   </div>
+</div></section>
+
+<section id="plans"><div class="wrap">
+  <h2>Start free. Upgrade when it earns its keep.</h2>
+  <p class="sub">Every new account gets 14 days of Pro, no card needed. After that you stay on Free unless you choose to upgrade.</p>
+  <div class="plans">
+    <div class="plan"><h3>Free</h3><div class="price">&pound;0</div><p>One active job and up to three workers.</p></div>
+    <div class="plan pick"><h3>Pro</h3><div class="price">&pound;29<small> / month + VAT</small></div><p>Unlimited jobs, up to ten workers and the supervisor link. Or &pound;290 a year + VAT.</p></div>
+    <div class="plan" id="founding"><h3>Founding Builder</h3><div class="price">&pound;15<small> / month + VAT</small></div><p>Pro for the first 15 building businesses, fixed while you stay subscribed. By invitation &mdash; ask below.</p></div>
+  </div>
+  <div class="cta" style="margin-top:24px"><a class="btn" href="https://job-hub-proof-production.up.railway.app/signup">Start free</a><a class="btn ghost" href="#waitlist">Ask for a Founding Builder place</a></div>
 </div></section>
 
 <section id="built"><div class="wrap">
   <h2>Built from real site work</h2>
-  <p class="sub">Job Hub started inside SJ Developments, a Liverpool building firm that does extensions, renovations and school works. We built it because we were tired of chasing ourselves around site, and we use it on our own jobs.</p>
+  <p class="sub">Job Hub started inside SJ Developments, a Liverpool building firm that does extensions, renovations and school works. We built it because we were tired of chasing ourselves around site, and we run our own jobs on it.</p>
 </div></section>
 
 <section id="waitlist"><div class="wrap">
-  <h2>Join the waitlist</h2>
-  <p class="sub">Tell us a little about you. We will email to confirm a Founding Builder place. Nothing is charged until you agree.</p>
+  <h2>Founding Builder places</h2>
+  <p class="sub">Want Pro at &pound;15 a month, fixed while you stay subscribed? Tell us a little about you and we will email to confirm a place. Nothing is charged until you agree. You can start free straight away in the meantime.</p>
   <form id="wl" novalidate>
     <div><label for="name">Your name</label><input id="name" type="text" autocomplete="name" required></div>
     <div><label for="biz">Business name</label><input id="biz" type="text" autocomplete="organization" required></div>
@@ -145,20 +232,21 @@ footer p{margin:6px 0}
 
 <section id="faq"><div class="wrap">
   <h2>Questions</h2>
-  <details><summary>Is it available now?</summary><p>We are opening it to a small group of Founding Builders first. Join the waitlist and we will confirm your place.</p></details>
-  <details><summary>Do I pay anything to join the waitlist?</summary><p>No. Nothing is charged until you have a confirmed place and agree to start.</p></details>
-  <details><summary>Does my crew need to download anything?</summary><p>No. They open their own link in the phone's browser. An Android app is with Google for review.</p></details>
-  <details><summary>Who can see my jobs?</summary><p>Only the people you give a link to, and only the job or jobs you assign them. Customers see their own job and no one else's.</p></details>
-  <details><summary>What happens after the first 15?</summary><p>Pro is £29 a month + VAT. Founding Builders keep £15 a month for as long as they stay subscribed.</p></details>
+  <details><summary>Is it available now?</summary><p>Yes. Android phones can install it from Google Play (UK and Ireland). iPhone and iPad users add it to their Home Screen from Safari. Any builder can create an account and start free.</p></details>
+  <details><summary>Is there an App Store version for iPhone?</summary><p>Not yet. On iPhone you open Job Hub in Safari and tap Share, then Add to Home Screen. It gets its own icon and opens full screen, like any other app.</p></details>
+  <details><summary>Does my crew or my customer need an account?</summary><p>No. They open the link you send them. They can install the app or add it to their Home Screen if they want it one tap away.</p></details>
+  <details><summary>Who can see my jobs?</summary><p>Only the people you give a link to, and only the job or jobs you assign them. Customers see their own job and no one else's. Prices, invoices and balances stay with you unless you choose to share them.</p></details>
+  <details><summary>Do I need a card to start?</summary><p>No. Every new account gets 14 days of Pro free, then moves to the Free plan unless you choose to upgrade on the website.</p></details>
+  <details><summary>Does it check payments with my bank?</summary><p>No. A customer can tell you they have paid, but you check your bank and mark the payment as received yourself.</p></details>
+  <details><summary>Already have an account?</summary><p><a href="https://job-hub-proof-production.up.railway.app/login">Sign in here</a>, or open the app.</p></details>
 </div></section>
 </main>
-
 <footer><div class="wrap">
   <p><strong>SJAI Job Hub</strong> is a product of SJ Developments North West Ltd. Company number 16371408. Address: 1 Fields End, Huyton, Liverpool L36 5YQ.</p>
-  <p>Questions: <a href="mailto:support@sjai.uk">support@sjai.uk</a></p>
+  <p>Questions: <a href="mailto:support@sjai.uk">support@sjai.uk</a> &middot; <a href="https://job-hub-proof-production.up.railway.app/privacy">Privacy notice</a> &middot; <a href="https://job-hub-proof-production.up.railway.app/terms">Terms</a> &middot; <a href="https://sjdevelopmentsnw.co.uk/job-hub">SJ Developments</a></p>
   <p>Prices exclude VAT at 20%.</p>
+  <p class="legal">Google Play and the Google Play logo are trademarks of Google LLC. iPhone, iPad and Safari are trademarks of Apple Inc.</p>
 </div></footer>
-
 <script>
 (function(){
   var f=document.getElementById('wl'),m=document.getElementById('msg');
@@ -178,6 +266,17 @@ footer p{margin:6px 0}
     m.className='msg show';
     window.location.href=href;
   });
+})();
+</script>
+<script>
+(function(){
+  var ua=navigator.userAgent||'',ios=/iPhone|iPad|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1),and=/Android/.test(ua);
+  var inapp=/Instagram|FBAN|FBAV|FB_IAB|TikTok|musical_ly|LinkedInApp/.test(ua);
+  var el=document.getElementById(ios?'iphone':and?'android':null);
+  if(el){el.classList.add('me');}
+  if(ios&&inapp){var n=document.getElementById('inapp');if(n)n.hidden=false;}
+  var s=document.getElementById('steps');
+  if(ios&&s&&el){s.insertBefore(el,s.firstChild);}
 })();
 </script>
 </body>

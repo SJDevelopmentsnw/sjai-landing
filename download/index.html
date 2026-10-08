@@ -157,6 +157,7 @@ footer p{margin:6px 0}
   <p><strong>SJAI Job Hub</strong> is a product of SJ Developments North West Ltd. Company number 16371408. Address: 1 Fields End, Huyton, Liverpool L36 5YQ.</p>
   <p>Questions: <a href="mailto:support@sjai.uk">support@sjai.uk</a> &middot; <a href="https://job-hub-proof-production.up.railway.app/privacy">Privacy notice</a> &middot; <a href="https://job-hub-proof-production.up.railway.app/terms">Terms</a> &middot; <a href="https://sjdevelopmentsnw.co.uk/job-hub">SJ Developments</a></p>
   <p>Prices exclude VAT at 20%.</p>
+  <p>We count visits to this page by device type (iPhone, Android or computer). No cookies, and nothing that identifies you is kept.</p>
   <p class="legal">Google Play and the Google Play logo are trademarks of Google LLC. iPhone, iPad and Safari are trademarks of Apple Inc.</p>
 </div></footer>
 <script>
@@ -168,6 +169,22 @@ footer p{margin:6px 0}
   if(ios&&inapp){var n=document.getElementById('inapp');if(n)n.hidden=false;}
   var s=document.getElementById('steps');
   if(ios&&s&&el){s.insertBefore(el,s.firstChild);}
+})();
+</script>
+<script>
+// Visit counter (2026-10-08): adds one to a running total for this page by
+// device type. No cookies, nothing stored on your device, nothing about you kept.
+(function(){
+  var u='https://job-hub-proof-production.up.railway.app/v/hit?s=sjai-download&e=';
+  function hit(e){var url=u+e+'&r='+Date.now();
+    try{fetch(url,{mode:'no-cors',keepalive:true,credentials:'omit',referrerPolicy:'no-referrer'})}catch(x){try{new Image().src=url}catch(y){}}}
+  hit('view');
+  document.addEventListener('click',function(ev){
+    var a=ev.target&&ev.target.closest?ev.target.closest('a'):null;if(!a)return;
+    var h=a.getAttribute('href')||'';
+    if(h.indexOf('play.google.com')>-1)hit('android_tap');
+    else if(h==='#get'||h==='#iphone')hit('iphone_tap');
+  },true);
 })();
 </script>
 </body>

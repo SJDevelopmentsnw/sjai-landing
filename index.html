@@ -109,12 +109,13 @@ footer p{margin:6px 0}
 <main id="top">
 <div class="wrap hero" style="padding:56px 20px 44px">
   <div>
-    <span class="tag">Out now &middot; Android and iPhone</span>
+    <span class="tag">Out now &middot; Android, iPhone and computer</span>
     <h1>One job.<br>One place.<br><em>Everyone clear.</em></h1>
     <p class="lead">The job app for builders, their crews and their customers. Updates, photos, agreed extras and customer questions, together on your phone instead of lost in WhatsApp.</p>
     <div class="cta">
       <a class="play" href="https://play.google.com/store/apps/details?id=com.sjdevelopmentsnw.jobhub&amp;referrer=utm_source%3Dsjai.uk%26utm_medium%3Dhero"><img src="/assets/google-play-badge.webp" width="564" height="168" alt="Get it on Google Play"></a>
       <a class="btn" href="#get">iPhone? Start here</a>
+      <a class="btn ghost" href="#desktop">On a computer?</a>
     </div>
     <p class="note">Start free with 14 days of Pro. No card needed. Built and used by a working Liverpool builder.</p>
   </div>
@@ -149,7 +150,7 @@ footer p{margin:6px 0}
 
 <section id="get"><div class="wrap">
   <h2>Get the app</h2>
-  <p class="sub">Three steps on any phone.</p>
+  <p class="sub">Three steps on any phone or computer.</p>
   <div class="steps" id="steps">
     <div class="step" id="android">
       <p class="for">Android phones <span class="you">Your phone</span></p>
@@ -171,6 +172,16 @@ footer p{margin:6px 0}
         <li>Scroll down, tap <strong>Add to Home Screen</strong>, then <strong>Add</strong>. Job Hub now has its own icon and opens full screen.</li>
       </ol>
       <p class="tip">Add to Home Screen only works from Safari. Allow notifications when Job Hub asks, so you see new messages.</p>
+    </div>
+    <div class="step" id="desktop">
+      <p class="for">Windows PC, laptop or Mac <span class="you">Your computer</span></p>
+      <h3>Install it from Chrome or Edge</h3>
+      <ol>
+        <li>In <strong>Google Chrome</strong> or <strong>Microsoft Edge</strong>, open <a href="https://job-hub-proof-production.up.railway.app/login">Job Hub</a> and sign in, or <a href="https://job-hub-proof-production.up.railway.app/signup">create your business account</a>. Crew and customers: open your builder&rsquo;s link.</li>
+        <li><strong>Chrome:</strong> click the <strong>&#8942;</strong> menu (top right), then <strong>Cast, save and share</strong>, then <strong>Install Job Hub</strong>.<br><strong>Edge:</strong> click the <strong>&middot;&middot;&middot;</strong> menu (top right), then <strong>Apps</strong>, then <strong>Install this site as an app</strong>.</li>
+        <li>Click <strong>Install</strong>. Job Hub opens in its own window, and you can pin it to your taskbar.</li>
+      </ol>
+      <p class="tip">Install once you are signed in and looking at your jobs, so the app opens straight to them. If an install icon shows at the right of the address bar, clicking it does the same thing. Mac with Safari: <strong>File</strong>, then <strong>Add to Dock</strong>.</p>
     </div>
     <div class="step" id="crew">
       <p class="for">Site teams and customers</p>
@@ -232,7 +243,7 @@ footer p{margin:6px 0}
 
 <section id="faq"><div class="wrap">
   <h2>Questions</h2>
-  <details><summary>Is it available now?</summary><p>Yes. Android phones can install it from Google Play (UK and Ireland). iPhone and iPad users add it to their Home Screen from Safari. Any builder can create an account and start free.</p></details>
+  <details><summary>Is it available now?</summary><p>Yes. Android phones can install it from Google Play (UK and Ireland). iPhone and iPad users add it to their Home Screen from Safari. On a computer, install it from Chrome or Edge. Any builder can create an account and start free.</p></details>
   <details><summary>Is there an App Store version for iPhone?</summary><p>Not yet. On iPhone you open Job Hub in Safari and tap Share, then Add to Home Screen. It gets its own icon and opens full screen, like any other app.</p></details>
   <details><summary>Does my crew or my customer need an account?</summary><p>No. They open the link you send them. They can install the app or add it to their Home Screen if they want it one tap away.</p></details>
   <details><summary>Who can see my jobs?</summary><p>Only the people you give a link to, and only the job or jobs you assign them. Customers see their own job and no one else's. Prices, invoices and balances stay with you unless you choose to share them.</p></details>
@@ -273,11 +284,11 @@ footer p{margin:6px 0}
 (function(){
   var ua=navigator.userAgent||'',ios=/iPhone|iPad|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1),and=/Android/.test(ua);
   var inapp=/Instagram|FBAN|FBAV|FB_IAB|TikTok|musical_ly|LinkedInApp/.test(ua);
-  var el=document.getElementById(ios?'iphone':and?'android':null);
+  var el=document.getElementById(ios?'iphone':and?'android':'desktop');
   if(el){el.classList.add('me');}
   if(ios&&inapp){var n=document.getElementById('inapp');if(n)n.hidden=false;}
   var s=document.getElementById('steps');
-  if(ios&&s&&el){s.insertBefore(el,s.firstChild);}
+  if((ios||!and)&&s&&el){s.insertBefore(el,s.firstChild);}
 })();
 </script>
 <script>

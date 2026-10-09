@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Download SJAI Job Hub | Android and iPhone</title>
+<title>Download SJAI Job Hub | Android, iPhone and computer</title>
 <meta name="description" content="Install SJAI Job Hub from Google Play on Android, or add it to your iPhone Home Screen from Safari. Start free with 14 days of Pro, no card needed.">
 <link rel="canonical" href="https://sjai.uk/download/">
 <meta property="og:type" content="website">
@@ -109,11 +109,11 @@ footer p{margin:6px 0}
 <main id="top">
 <div class="wrap" style="padding:44px 20px 20px">
   <span class="tag">SJAI Job Hub &middot; Get the app</span>
-  <h1 style="font-size:clamp(1.9rem,6vw,3rem)">Get Job Hub on your phone.</h1>
+  <h1 style="font-size:clamp(1.9rem,6vw,3rem)">Get Job Hub on your phone or computer.</h1>
   <p class="lead">Free to start, with 14 days of Pro and no card needed.</p>
   <div class="cta">
     <a class="play" href="https://play.google.com/store/apps/details?id=com.sjdevelopmentsnw.jobhub&amp;referrer=utm_source%3Dsjai.uk%26utm_medium%3Ddownload"><img src="/assets/google-play-badge.webp" width="564" height="168" alt="Get it on Google Play"></a>
-    <a class="btn" href="https://job-hub-proof-production.up.railway.app/signup">Start free on iPhone or web</a>
+    <a class="btn" href="https://job-hub-proof-production.up.railway.app/signup">Start free on iPhone or computer</a>
   </div>
 </div>
 <section style="border-top:0;padding-top:20px"><div class="wrap">
@@ -138,6 +138,16 @@ footer p{margin:6px 0}
         <li>Scroll down, tap <strong>Add to Home Screen</strong>, then <strong>Add</strong>. Job Hub now has its own icon and opens full screen.</li>
       </ol>
       <p class="tip">Add to Home Screen only works from Safari. Allow notifications when Job Hub asks, so you see new messages.</p>
+    </div>
+    <div class="step" id="desktop">
+      <p class="for">Windows PC, laptop or Mac <span class="you">Your computer</span></p>
+      <h3>Install it from Chrome or Edge</h3>
+      <ol>
+        <li>In <strong>Google Chrome</strong> or <strong>Microsoft Edge</strong>, open <a href="https://job-hub-proof-production.up.railway.app/login">Job Hub</a> and sign in, or <a href="https://job-hub-proof-production.up.railway.app/signup">create your business account</a>. Crew and customers: open your builder&rsquo;s link.</li>
+        <li><strong>Chrome:</strong> click the <strong>&#8942;</strong> menu (top right), then <strong>Cast, save and share</strong>, then <strong>Install Job Hub</strong>.<br><strong>Edge:</strong> click the <strong>&middot;&middot;&middot;</strong> menu (top right), then <strong>Apps</strong>, then <strong>Install this site as an app</strong>.</li>
+        <li>Click <strong>Install</strong>. Job Hub opens in its own window, and you can pin it to your taskbar.</li>
+      </ol>
+      <p class="tip">Install once you are signed in and looking at your jobs, so the app opens straight to them. If an install icon shows at the right of the address bar, clicking it does the same thing. Mac with Safari: <strong>File</strong>, then <strong>Add to Dock</strong>.</p>
     </div>
     <div class="step" id="crew">
       <p class="for">Site teams and customers</p>
@@ -164,11 +174,11 @@ footer p{margin:6px 0}
 (function(){
   var ua=navigator.userAgent||'',ios=/iPhone|iPad|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1),and=/Android/.test(ua);
   var inapp=/Instagram|FBAN|FBAV|FB_IAB|TikTok|musical_ly|LinkedInApp/.test(ua);
-  var el=document.getElementById(ios?'iphone':and?'android':null);
+  var el=document.getElementById(ios?'iphone':and?'android':'desktop');
   if(el){el.classList.add('me');}
   if(ios&&inapp){var n=document.getElementById('inapp');if(n)n.hidden=false;}
   var s=document.getElementById('steps');
-  if(ios&&s&&el){s.insertBefore(el,s.firstChild);}
+  if((ios||!and)&&s&&el){s.insertBefore(el,s.firstChild);}
 })();
 </script>
 <script>

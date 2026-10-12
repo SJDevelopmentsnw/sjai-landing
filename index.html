@@ -103,6 +103,13 @@ footer p{margin:6px 0}
 .team-video li{margin:6px 0}
 .legal{font-size:.8rem;color:var(--muted)}
 .btn{display:inline-flex;align-items:center;justify-content:center}
+.btn.big{font-size:1.12rem;padding:16px 28px;min-height:56px;width:100%;max-width:360px}
+.get-alt{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-top:18px;color:var(--muted);font-size:.95rem}
+.get-alt .play img{height:44px}
+.get-alt a:not(.play){color:var(--text);font-weight:600;text-underline-offset:3px}
+.logo{display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+@media(max-width:600px){.get-alt>span{flex-basis:100%}}
+@media(max-width:400px){.logo{font-size:1rem}.nav .btn.small{padding:9px 12px}}
 </style>
 </head>
 <body>
@@ -121,11 +128,15 @@ footer p{margin:6px 0}
     <h1>One job.<br>One place.<br><em>Everyone clear.</em></h1>
     <p class="lead">The job app for builders, their crews and their customers. Updates, photos, agreed extras and customer questions, together on your phone instead of lost in WhatsApp.</p>
     <div class="cta">
-      <a class="play" href="https://play.google.com/store/apps/details?id=com.sjdevelopmentsnw.jobhub&amp;referrer=utm_source%3Dsjai.uk%26utm_medium%3Dhero"><img src="/assets/google-play-badge.webp" width="564" height="168" alt="Get it on Google Play"></a>
-      <a class="btn" href="#get">iPhone? Start here</a>
-      <a class="btn ghost" href="#desktop">On a computer?</a>
+      <a class="btn big" href="https://job-hub-proof-production.up.railway.app/signup">Start free: 14 days of Pro</a>
     </div>
-    <p class="note">Start free with 14 days of Pro. No card needed. Built and used by a working Liverpool builder.</p>
+    <p class="note">No card needed. Takes about a minute, on any phone or computer. Built and used by a working Liverpool builder.</p>
+    <div class="get-alt">
+      <span>Or get the app:</span>
+      <a class="play" href="https://play.google.com/store/apps/details?id=com.sjdevelopmentsnw.jobhub&amp;referrer=utm_source%3Dsjai.uk%26utm_medium%3Dhero"><img src="/assets/google-play-badge.webp" width="564" height="168" alt="Get it on Google Play"></a>
+      <a href="#get">iPhone</a>
+      <a href="#desktop">Computer</a>
+    </div>
   </div>
   <div class="hero-shot"><img src="/assets/jh-ex-team-480w.webp" width="480" height="727" alt="Job Hub site-team conversation on a phone, using an invented job."></div>
 </div>
@@ -333,6 +344,7 @@ footer p{margin:6px 0}
     var h=a.getAttribute('href')||'';
     if(h.indexOf('play.google.com')>-1)hit('android_tap');
     else if(h==='#get'||h==='#iphone')hit('iphone_tap');
+    else if(h.indexOf('/signup')>-1)hit('start_tap');
   },true);
 })();
 </script>
